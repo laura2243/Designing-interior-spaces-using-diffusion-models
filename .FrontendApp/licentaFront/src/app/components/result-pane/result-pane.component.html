@@ -1,0 +1,67 @@
+<!-- <label class="resultLabel">Result</label> -->
+
+<!-- FOR WHEN GENERATING IMAGES IS IMPLEMENTED -->
+<!-- <img #imageElement id="imageElement" [src]=generatedImage alt="" class="imageUnder"> -->
+
+<div class="imageContainerWrapper">
+    <label *ngIf="!singleImage && fromGenerate" class="resultLabel">Choose an Image for Inpainting</label>
+    <label *ngIf="singleImage && fromGenerate" class="resultLabel">Press the Right Arrow To Inpaint</label>
+    <label *ngIf="!fromGenerate" class="resultLabel">Final Inpainting Result</label>
+    <div class="subtitle">
+        <label *ngIf="!fromGenerate" class="resultLabelSubtitle">Press <strong> Left Arrow </strong> to Reinpaint</label>
+        <label *ngIf="!fromGenerate" class="resultLabelSubtitle">or</label>
+        <label *ngIf="!fromGenerate" class="resultLabelSubtitle"> <strong> Choose </strong> image and press <strong> Right Arrow </strong> to continue inpainting</label>
+
+       
+
+    </div>
+    <div class="imagesContainer">
+        <!-- decomment when ready -->
+        <!-- <div class="image" *ngFor="let image of this.generatedImages"> -->
+
+        <button *ngIf="fromGenerate" class="arrow" (click)="regenerateButton()">
+            <div class="buttonWrapper">
+                <svg class="flip" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                        fill="#1C274C" />
+                </svg>
+            </div>
+        </button>
+        <button *ngIf="!fromGenerate" class="arrow" (click)="reinpaintButton()">
+            <div class="buttonWrapper">
+                <svg class="flip" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                        fill="#1C274C" />
+                </svg>
+            </div>
+        </button>
+        <div class="image" *ngFor="let image of generatedImages" (click)="clickedImage($event, image)">
+            <img [ngClass]="getImageClass()" [src]="image" alt="" class="imageElement">
+        </div>
+
+        <button *ngIf="fromGenerate" class="arrow" (click)="inpaintImage(this.selectedImageElement)">
+            <div class="buttonWrapper">
+                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                        fill="#1C274C" />
+                </svg>
+            </div>
+        </button>
+
+        <button *ngIf="!fromGenerate" class="arrow" (click)="continueInpaintButton()">
+            <div class="buttonWrapper">
+                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                        fill="#1C274C" />
+                </svg>
+            </div>
+        </button>
+
+    </div>
+    <!-- </div> -->

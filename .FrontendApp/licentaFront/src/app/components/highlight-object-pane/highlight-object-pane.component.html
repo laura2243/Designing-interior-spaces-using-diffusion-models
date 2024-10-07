@@ -1,0 +1,37 @@
+<header>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</header>
+<div class="paintableArea">
+
+    <canvas #highlightCanvas id="canvas" (click)="onClick($event)"></canvas>
+    <img #imageElement id="imageElement" [src]="inputImage" alt="" class="inputImage">
+    <!-- <img #imageElement id="imageElement" src="assets/bedroom.jpg" alt="" class="inputImage"> -->
+</div>
+
+<div class="brush">
+    <div class="iconAndLabel">
+        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" fill="white" />
+            <circle cx="12" cy="12" r="9" stroke="rgba(0,0,0,0.65)" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 11V17" stroke="rgba(0,0,0,0.65)" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11.75 8V7H12.25V8H11.75Z" stroke="rgba(0,0,0,0.65)" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+        <label>Select the stroke size and highlight the object you want to change</label>
+
+
+    </div>
+    <div class="brushAndErase">
+        <div class="brushSizeContainer">
+            <input id="lineBrush" type="range" min="10" max="30" step="1" value="20" (input)="onSliderChange($event)">
+
+            <input id="sliderValueBrush" type="text" value="0.8">
+
+        </div>
+        <span class="material-symbols-outlined eraseIcon" (click)="onEraseClick()">
+            replay
+        </span>
+
+    </div>
+</div>

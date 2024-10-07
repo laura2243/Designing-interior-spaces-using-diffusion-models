@@ -1,0 +1,242 @@
+.content {
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: white;
+    height: calc(94% - 69px);
+    width: 90%;
+    left: 5%;
+    position: absolute;
+    top: calc(69px + 3%);
+
+    border-radius: 7px;
+    border: solid 1px #dadce0;
+    box-shadow: 0 3px 10px gray;
+    transition: 1s ease-in-out;
+
+
+
+
+}
+
+
+.imageUnder{
+  width: 500px;
+  height: 500px;  
+}
+
+.image {
+    /* position: absolute; */
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 20px;
+    border: solid 1px #dadce0;
+    box-shadow: 0 2px 10px gray;
+
+    transition: transform 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+.leftPanel {
+
+    margin-left: 5%;
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 40px;
+    color: rgb(41, 68, 103);
+}
+
+.rightPanel {
+
+    height: 100%;
+    width: 50%;
+    gap: 7%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+.title {
+
+    margin-top:  9%;
+}
+
+.promptContainer {
+
+
+
+    margin-top: 4%;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 25px;
+    color: black;
+
+
+}
+
+.prompt {
+
+
+    /* background-color: rgba(240, 240, 240, 0.4); */
+    /* background: radial-gradient(ellipse at top, rgba(47, 47, 105), transparent); */
+
+    border-radius: 7px;
+    border: solid 1px #dadce0;
+    box-shadow: 0 2px 10px gray;
+    padding: 0 3% 0 3%;
+    transition: 1s ease-in-out;
+
+    font-size: 20px;
+    font-weight: 400;
+   
+    min-width: fit-content;
+    
+
+}
+
+.arrow {
+
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    /* border: solid 2px rgb(47, 47, 105); */
+    background-color: rgb(47, 47, 105);
+
+
+}
+
+.buttonWrapper {
+
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    margin: 2px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: 100;
+    background-color: #f0f0f0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.arrow:hover {
+    box-shadow: rgba(143, 0, 255, 0.6) 0 0 calc(0.95rem);
+    border-style: solid;
+    border-image: initial;
+    border: none;
+    background: linear-gradient(81.02deg, rgb(250, 85, 96) -23.47%, rgb(177, 75, 244) 45.52%, rgb(77, 145, 255) 114.8%) border-box;
+    /* border-color: liniar-gradient(81deg, rgb(250, 85, 96) -23.5%, rgb(177, 75, 244) 45.5%, rgb(77, 145, 255) 115%); */
+}
+
+.flip {
+    transform: scale(-1, 1);
+}
+
+
+html {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, rgba(47, 47, 105) 79px, white);
+    /* background: linear-gradient(81.02deg, rgb(250, 85, 96) -23.47%, rgb(177, 75, 244) 45.52%, rgb(77, 145, 255) 114.8%) border-box; */
+
+}
+
+.downloadButton {
+
+    margin-top: 14% !important;
+
+    width: 38%;
+    height: 68px;
+    color: white;
+    font-size: large;
+    margin-top: 2%;
+    /* background-color: #5858e6; */
+    background: linear-gradient(to right, rgb(177, 75, 244) , rgb(77, 145, 255) ) ;
+
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s ease-in-out;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    border: none;
+
+
+    background-size: 200% 100%;
+
+    
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 20px;
+
+
+}
+
+.downloadButton:hover {
+
+    background-position: right center;
+}
+
+img{
+    transition: opacity 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carouselElement{
+    transition: opacity 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+
+.backArrow{
+    position: absolute;
+    margin-top: 30px;
+    left:40px;
+    z-index: 200;
+    cursor: pointer;
+}
+

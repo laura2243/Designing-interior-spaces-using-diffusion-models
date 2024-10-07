@@ -1,0 +1,21 @@
+<div class="content">
+
+
+    <label class="switch">
+        <input type="checkbox" (click)="toggleSlider()">
+        <span class="slider" > </span>
+        <span class="text">Removed Object</span>
+    </label>
+
+    <div *ngIf="!isActive" class="imageUnder" [ngStyle]="{'background-image': 'url(' + selectedImage + ')'}"  >
+        <img  #imageElement id="imageElement" [src]="highlightedImage" alt="" class="inputImage">
+    </div>
+
+    <!-- TO DECOMMENT WHEN WORKS -->
+    <img *ngIf="isActive" #imageElement id="imageElement" [src]="lamaImage" alt="" class="imageUnder">
+
+
+    <!-- <img  *ngIf="!isActive" id="imageElement"  [src]="selectedImage" alt="" class="inputImage" > -->
+
+    <button id="regenerateButton" (click)="onButtonClick()">Regenerate Mask</button>
+</div>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <app-navigation-bar></app-navigation-bar>
+
+
+
+    <div class="content">
+
+
+        <div class="leftPanel">
+            <span class="material-symbols-outlined backArrow" (click)="onBackClick()">
+                arrow_back_ios
+            </span>
+            <div class="title">
+                <p *ngIf="imageNumber==0">Final Inpainting Result</p>
+                <p *ngIf="imageNumber==1">Input Image</p>
+                <p *ngIf="imageNumber==2">Replaced Object Mask</p>
+                <p *ngIf="imageNumber==3 &&  this.carouselObject.isImageInpaint">Background Image Mask</p>
+                <p *ngIf="imageNumber==4 && this.carouselObject.isImageInpaint">Inpainted Object Image</p>
+
+            </div>
+
+            <div *ngIf="this.carouselObject.isGenerated" class="promptContainer">
+
+                <p>Generation Prompt</p>
+                <div class="prompt">
+                    <p>
+                        {{ this.carouselObject.promptGeneration}}
+                    </p>
+                </div>
+            </div>
+
+
+            <div *ngIf="!this.carouselObject.isGenerated " class="promptContainer">
+
+                <p>Inpaint Prompt</p>
+                <div class="prompt">
+                    <p>
+                        {{ this.carouselObject.promptInpaint}}
+                    </p>
+                </div>
+            </div>
+
+            <button class="downloadButton" (click)="downloadImage()">Download Image</button>
+
+        </div>
+        <div class="rightPanel">
+
+            <button class="arrow" (click)="previousImageClick()">
+                <div class="buttonWrapper">
+                    <svg class="flip" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                            fill="#1C274C" />
+                    </svg>
+                </div>
+            </button>
+
+
+            <div class="imageUnder">
+                <img *ngIf="imageNumber==0" [src]=this.carouselObject.resultImage alt="" class="image">
+                <img *ngIf="imageNumber==1" [src]=this.carouselObject.inputImage alt="" class="image">
+                <img *ngIf="imageNumber==2" [src]=this.carouselObject.maskObject alt="" class="image">
+                <img *ngIf="imageNumber==3 && this.carouselObject.isImageInpaint"
+                    [src]=this.carouselObject.maskBackground alt="" class="image">
+                <img *ngIf="imageNumber==4 && this.carouselObject.isImageInpaint" [src]=this.carouselObject.objectImage
+                    alt="" class="image">
+            </div>
+
+            <button class="arrow" (click)="nextImageClick()">
+                <div class="buttonWrapper">
+                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                            fill="#1C274C" />
+                    </svg>
+                </div>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>

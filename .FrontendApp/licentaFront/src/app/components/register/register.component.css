@@ -1,0 +1,327 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(47, 47, 105) 79px, white 70%);
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 16px;
+    overflow: hidden !important;
+
+
+}
+
+.videoAndRegisterContainer {
+    /* background-color: red; */
+    width: 89%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    overflow: hidden;
+    border-radius: 1rem;
+    /* border: solid 3px white; */
+
+    border: 2px solid hsla(0, 0%, 100%, 0.7);
+
+}
+
+.videoContainer {
+    /* position: absolute; */
+    width: 66%;
+    height: 100%;
+    left: 0;
+    top: 79px !important;
+    object-fit: contain;
+    overflow: hidden;
+   
+
+
+
+}
+
+.registerContainer {
+
+    /* background-color: green; */
+    /* position: absolute; */
+    right: 0;
+    /* top: 7px !important; */
+    width: 35%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px) !important;
+    border-left: 2px solid hsla(0, 0%, 100%, 0.7);;
+    /* z-index: -1; */
+
+
+
+}
+
+.registerForm {
+    border-radius: 0rem 1rem 1rem 0rem;
+    width: 99.3%;
+    height: 99.4%;
+    background-color: hsla(0, 0%, 100%, 0.01);
+    /* border: 2px solid hsla(0, 0%, 100%, 0.7); */
+    /* backdrop-filter: blur(10px) !important; */
+    /* box-shadow: 0 3px 10px #5858e6; */
+    z-index: 50;
+}
+
+.registerImg {
+    border-radius: 1.2rem;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("../../../assets/loginImg6.jpg"); */
+    background-size: 100% 100%;
+    background-position: center;
+
+
+
+}
+
+.svg-container {
+    height: 100px;
+    width: 300px;
+    margin-right: -15px;
+
+}
+
+.registerTitle {
+
+    text-align: center;
+    color: white;
+    margin-top: -8%;
+    margin-bottom: 10%;
+
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 45px;
+    letter-spacing: 1px;
+    justify-content: center;
+}
+
+
+form {
+
+    margin-top: 15%;
+    width: 100%;
+    height: 80%;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-size: 1.25rem;
+
+    gap: 4%;
+}
+
+.formInput {
+    height: 10%;
+    width: 60%;
+    border: 2px solid hsla(0, 0%, 100%, 0.7);
+    border-radius: 4rem;
+    padding-inline: 1.25rem;
+    align-items: center;
+    column-gap: .75rem;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+
+}
+
+
+input {
+    display: grid;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: white;
+    font-size: large;
+
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+ .buttonRegister {
+    height: 10%;
+    width: 67%;
+
+    margin-top: 30px;
+    color: white;
+    font-size: large;
+
+
+    background-size: 200% 100%;
+    transition: 0.25s ease-in-out;
+    border: 1px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10%;
+    transition: 0.25s ease-in-out;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+
+
+
+    background: hsla(0,0%,100%,0.4);
+
+} 
+
+
+
+.buttonRegister:hover {
+    /* background: #7373ea; */
+    background: hsla(0,0%,100%,0.6);
+
+}
+
+.buttonRegister:active {
+    border: 2px solid hsla(0, 0%, 100%, 0.7);
+}
+
+input::placeholder {
+    color: aliceblue;
+    font-size: large;
+}
+
+
+input:focus {
+    border: none;
+}
+
+.formInput:focus-within {
+    border: 2px solid hsla(0, 0%, 100%, 0.7);
+    box-shadow: 0 3px 10px gray;
+
+
+}
+
+.material-symbols-outlined {
+    color: white;
+    margin-right: 3%;
+}
+
+
+/* Back Arrow */
+.backArrow {
+
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 25px;
+    width: 20px;
+    height: 20px;
+}
+
+.backArrow:hover{
+    text-shadow: 0 0 10px white;
+   
+}
+
+.videoBackground {
+    /* object-fit:fill; */
+    top: 6%;
+    left: 25%;
+    position: absolute;
+    transform: scaleX(2) scaleY(1.15);
+    filter: blur(5px);
+}
+
+.video{
+    display: block;
+    margin: 0 auto;
+
+    border-right: 2px solid hsla(0, 0%, 100%, 0.7);
+    border-radius: 1rem 0rem 0rem 1rem;
+}
+
+.registerLabel{
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+.link{
+    text-shadow: 0 0 10px black;
+    color: white;
+    font-style: italic;
+    transition: 0.2s ease-in-out ;
+}
+
+.link:hover{
+    text-shadow: 0 0 10px white;
+
+}
+.border-red {
+    border: 2px solid hsla(0, 100%, 50%, 0.7) !important;
+    box-shadow: 0 0px 10px red;
+    color: red !important;
+}
+.alertLabel {
+    text-align: center;
+    position: absolute;
+    /* color: rgb(218, 75, 75);
+    text-shadow: 0 0px 10px white; */
+
+
+    color: white;
+    text-shadow: 0 0px 10px red;
+
+    left: 48px;
+    width: 500px;
+    margin-right: 20%;
+    margin-top: 0;
+    padding-top: 0;
+    /* margin-left: 20%; */
+}
+
+button:disabled,
+button[disabled] {
+    background: hsla(0, 0%, 100%, 0.4) !important;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2) !important;
+    cursor: default !important;
+
+}
