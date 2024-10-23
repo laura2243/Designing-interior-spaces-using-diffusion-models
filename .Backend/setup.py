@@ -13,7 +13,7 @@ from sqlalchemy import DateTime
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'  # Define the upload folder path
 app.config["SECRET_KEY"] = "asdfg"
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:laura2243@localhost/designfy"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:Database123!@database-1.cp4q24yiijob.eu-north-1.rds.amazonaws.com:5432/database1"
 # CORS(app, supports_credentials=True, origins='https://localhost:4200')
 CORS(app, resources={r"/*": {"origins": "http://localhost:4200"}})
 db = SQLAlchemy(app)
